@@ -1,0 +1,2 @@
+# travelblogsite
+It is a travel blog site (my demo project ) -with this website people can watch blogs post blogs, create their profile , do comment anonymously  (This blog site  can  be used as any format like food blogging ,fashion blogging etc) (In the front end frameworks I have jqureey ,aos lib ).(In the backend I have used node.js ,express-framework) , ejs template (database-mongodb with mongoose lib)
