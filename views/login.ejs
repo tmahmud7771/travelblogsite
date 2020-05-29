@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/stylesheets/all.css">
+    <link rel="stylesheet" href="/stylesheets/all.css">
+    <link href="/stylesheets/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/form.css">
+    
+</head>
+<body>
+    <%- include("./partials/navbar") %>
+   <div class="container">
+       <div class="form-back">
+          <div class="grid-form">
+              <div class="grid-item1">
+                 <span><i class="far fa-user-circle"></i></span>
+                   <form action="/login" method="POST" class="form-login" id="form-login">
+                         <div class="form-input">
+                        <input type="text" name="username" placeholder="username" autocomplete="off" >
+                        </div>
+                         <div class="form-input">
+                        <input type="password" name="password" placeholder="password" >
+                       </div>
+                    <button class="btn-form">Sign in</button>
+                 </form>
+                 <form action="/register" method="POST" class="form-register" id="form-register">
+                    <div class="form-input">
+                   <input type="text" name="username" placeholder="username" autocomplete="off" maxlength="20" minlength="5" required>
+                   </div>
+                    <div class="form-input">
+                   <input type="password" name="password" placeholder="password" required maxlength="20" minlength="5">
+                  </div>
+               <button class="btn-form">Sign up</button>
+            </form>
+                 <p>or</p>
+                <p id="create" class="a-form-link">create an account</p>
+               </div> 
+             <div class="grid-item2">
+           </div>    
+    </div>
+  </div>
+</div>
+
+
+    <%- include("./partials/scripts") %>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogsite</title>
+    
+    <!-- font awsome -->
+    <link rel="stylesheet" href="../stylesheets/all.css">
+    <!-- aos scrool -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- aos scrool ------x-->
+    <link href="../stylesheets/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/blogshow.css">
+    
+</head>
+<body>
+    <%- include("../partials/navbar") %>
+    <div class="container">
+        <div class="fuzzy-form">
+            <form action="/blogs" method="GET">
+                <input a class="fuzzy-input" type="text" name="search" placeholder="Blog search..." class="form-control" autocomplete="off">
+                <button class="btn-fuzzy"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="add-blog-btn-body">
+           <a href="/blogs/new"><button class="add-blog-btn">Add a new Blog &nbsp;&nbsp;<i class="fas fa-plus"></i></button></a>
+        </div>
+            <!-- blogpost ------------------------------------->
+     <div class="blog-posts">
+        <% blogs.forEach(function(blog){ %>
+            <div class="blog-post" data-aos="flip-up" data-aos-duration="1000">
+                <div class="blog-image">
+                    <img src="<%= blog.image %>" alt="blog-image">
+                </div>
+                <div class="blog-infor">
+                    <h3><%= blog.title %></h3>
+                    <p><%= blog.description.substring(0, 300) %>...</p>
+                    <a href="/blogs/<%= blog._id %>"><button class="blog-btn-show">Readmore</button></a>
+                </div>
+            </div>
+        <% }) %>  
+    </div>
+    </div>
+    
+
+
+
+
+
+    <%- include("../partials/scripts") %>
+</body>
+</html>
+
+
+

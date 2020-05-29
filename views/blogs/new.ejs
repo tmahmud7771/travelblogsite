@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog site</title>
+    
+    <link rel="stylesheet" href="../stylesheets/all.css">
+    <link href="../stylesheets/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/new.css">
+</head>
+<body>
+    <%- include("../partials/navbar") %>
+        <div class="container">
+            <div class="new-body">
+                <form class="new-form" action="/blogs" method="POST">
+                   <div class="div-title"><h4>Title</h4><input id="title" class="input-title" type="text" name="blog[title]" required maxlength="30"></div>
+                    <div class="div-url"><h4>Image url</h4><input id="url" class="input-url" type="text" name="blog[image]" required></div>
+                    <div class="div-textaarea">
+                        <h4>Description</h4>
+                        <textarea class="new-textarea" name="blog[description]"></textarea>
+                    </div>
+                    <button class="btn-new-submit">submit</button>           
+                </form>
+            </div>
+        </div>
+
+    <%- include("../partials/scripts") %>
+    
+</body>
+</html>

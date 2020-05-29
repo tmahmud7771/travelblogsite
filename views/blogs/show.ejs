@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog site</title>
+    
+    <link rel="stylesheet" href="../stylesheets/all.css">
+    <!-- aos scrool -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- aos scrool ------x-->
+    <link href="../stylesheets/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/show.css">
+</head>
+<body >
+    <%- include("../partials/navbar") %>
+
+<div class="container">
+    <div class="show-grid">
+        <!-- grid-70%  -->
+        <div class="grid-item1">
+            <div class="show-content">
+                <div class="show-image"><div class="show-img-size"><img src="<%= blog.image %>" alt=""></div></div>
+                <div class="show-info">
+                    <h4><%= blog.title %></h4>
+                    <p><%= blog.description %></p>
+                    <a class="show-blockquote" href="">&nbsp;&nbsp; - submited by <%= blog.author.username %> </a>
+                </div>
+            </div>
+            <h4>Comments</h4>
+            <div class="show-comment">
+                <div class="comment-body">
+                    <!-- display item -->
+                    <div class="display-comments">
+                        <% blog.comments.forEach(function(comment){ %>
+                  <div class="each-comment">
+                         <li>  
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>  
+                            <span>
+                                <form action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                     <button><i class="fa fa-trash fa-lg"></i></button>
+                                 </form>
+                            </span> 
+                            <% } %>
+                            <%= comment.text %> 
+                        </li>   
+                  </div>
+                  <% }) %>
+                      
+                    </div>
+                    <!-- push comment -->
+                    <div class="add-comment">
+                        <form action="/blogs/<%= blog._id %>/comments" method="POST" class="form-show">
+                            <input type="text" name="comment[text]" placeholder="&nbsp;&nbsp;&nbsp;&nbsp; comment" class="input-comment">
+                            <button class="btn-comment">Submit</button>
+                        </form>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <!-- grid-30% -->
+        <div class="grid-item2">
+            <div class="show-sidecontent">
+                <div class="show-map">
+                    <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=487&q=80" alt="">
+                </div>
+                <% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
+                    <div class="btn-blog-show">
+                        <a href="/blogs/<%= blog._id %>/edit"><button class="edit-show">Edit</button> </a>
+                        <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" ><button class="delete-show">Delete</button></form>
+                    </div>
+               <% } %> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <%- include("../partials/scripts") %>
+</body>
+</html>

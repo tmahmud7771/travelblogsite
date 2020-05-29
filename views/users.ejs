@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("./partials/stylelink") %>
+    <link rel="stylesheet" href="/stylesheets/users.css">
+</head>
+<body>
+    <%- include("./partials/navbar") %>
+          <div class="container">
+            <div class="fuzzy-form">
+                <form action="/users" method="GET">
+                    <input a class="fuzzy-input" type="text" name="search" placeholder="find people" class="form-control">
+                    <button class="btn-fuzzy"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="users-body">
+                <!-- each user -->
+                <% users.forEach(function(user){ %>
+                    <div class="user-body">
+                    <div class="user-image"><img src="<%= user.image %>"></div>
+                    <div class="user-info">
+                        <h4><%= user.username %></h4>
+                        <div class="user-bio"><p><%= user.bio.substring(0,200) %>...</p></div>
+                        <a href="/users/<%= user._id %>"><button class="btn-user-explore">view profile</button></a>
+                    </div>
+                </div>
+
+                <% }) %>
+            </div>
+            </div>
+    <%- include("./partials/scripts") %>
+</body>
+</html>
