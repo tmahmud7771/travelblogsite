@@ -1,0 +1,52 @@
+<nav class="nav">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="" class="text-gray">Blooger</a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <div class="nav-item">
+                <li class="nav-link"><a href="/">Home</a></li>
+                <li class="nav-link"><a href="#">Category</a></li>
+                <li class="nav-link"><a href="/users">Users</a></li>
+                <li class="nav-link"><a href="/blogs">Blogs</a></li>
+                <% if(!currentUser){ %>
+                       <li class="nav-link"><a href="/login">Login</a></li>
+                    <% } else { %>
+                      <li class="nav-link"><a href="/users/<%= currentUser._id %>"><%= currentUser.username %></a></li>
+                 <% } %>
+            </div>
+        </div>
+        
+        <div class="social text-gray">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        <% if(!currentUser){ %>
+                
+             <% } else { %>
+            <a href="/logout">&nbsp;&nbsp;<i id="logout" class="fas fa-sign-out-alt"></i></a>
+         <% } %>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <% if(error && error.length > 0){ %>
+        <div class="alert-error">
+            <%= error %>
+        </div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+          <div class="alert-success">
+            <%= success %>
+          </div> 
+    <% } %>
+</div>
+
+</div>

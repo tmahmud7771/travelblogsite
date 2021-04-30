@@ -1,0 +1,202 @@
+body html {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.fuzzy-form  {
+    width: 40%;
+    margin: 2rem auto;
+    background:whitesmoke;
+    border-radius: 2rem;
+    border: 3px solid #104f55;
+}
+
+.fuzzy-form .fuzzy-input {
+ padding: 0.4rem 5rem;
+ border-radius: 2rem;
+ border: none;
+ background: none;
+ margin: 0;
+}
+.fuzzy-form .btn-fuzzy {
+    border-radius: 1.3rem;
+    border: none;
+    padding: 0.4rem 1rem;
+    color:#104f55;
+    float: right;
+    margin: 0;
+    background:whitesmoke;
+}
+.fuzzy-form .btn-fuzzy:focus {
+    outline: none;
+}
+.fuzzy-form .btn-fuzzy:hover{
+    background-color: #104f55;
+    color: whitesmoke;
+}
+.fuzzy-form .fuzzy-input:focus{
+    outline: none;
+}
+.fuzzy-form .fuzzy-input::placeholder {
+    color:#104f55 ;
+    font-size: 0.8rem;
+    text-align: left;;
+}
+/* //add new btn */
+.add-blog-btn-body {
+    text-align: center;
+    width: auto;
+}
+.add-blog-btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 10%;
+    padding: 0.4rem 0;
+    border-radius: 3rem;
+    border: 2px solid #104f55;
+    background:none;
+    color: #104f55;
+    font-weight: 600;
+    cursor: pointer;
+}
+.add-blog-btn:hover {
+    background-color: #104f55;
+    color: white;
+    border:1px solid #104f55 ;
+}
+.add-blog-btn:focus {
+    outline: none;
+}
+/* blog */
+.blog-posts {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.blog-post {
+    width: 50%;
+    height: auto;
+    background: white;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    box-shadow: 0px 10px 13px -17px #000000, 7px 9px 17px -9px rgba(0,0,0,0);
+}
+.blog-post .blog-image  img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
+    
+}
+
+.blog-post .blog-infor {
+    margin: 0.5rem;
+}
+
+.blog-post .blog-infor h3 {
+    color: rgba(0, 0, 0, 0.7);
+}
+.blog-post .blog-infor p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+    line-height: 1.4rem;
+    font-size: 0.8rem;
+}
+
+ .blog-post .blog-infor .blog-btn-show {
+     border: 2px solid rgba(0, 0, 0, 0.7);
+     background: white;
+     color:gray;
+     padding: 0.3rem 1.5rem;
+     margin-bottom: 0.3rem;
+     cursor: pointer;
+ }
+ .blog-post .blog-infor .blog-btn-show:focus {
+     outline: none;
+ }
+ .blog-post .blog-infor .blog-btn-show:hover {
+     background-color:rgba(0, 0, 0, 0.7);
+     color: white;
+     border: none;
+     padding: 0.4rem 1.6rem;
+ }
+ @media only screen and (max-width:1024px){
+    .fuzzy-form .fuzzy-input {
+        padding: 0.4rem 13rem;
+        }
+       .fuzzy-form {
+            width: 75%;
+        }
+        .blog-post {
+            width: 70% !important;
+        }
+        .add-blog-btn {
+            width: 20% !important;
+        }
+
+ }
+
+ @media only screen and (max-width:770px){
+    
+    .fuzzy-form .fuzzy-input {
+        padding: 0.4rem 0 !important;
+        width: 70%;
+    }
+    .fuzzy-form {
+        width: 75%;
+    }
+    .add-blog-btn {
+        width: 25% !important;
+    }
+ }
+ @media only screen and (max-width:720px) {
+    .add-blog-btn {
+        width: 40% !important;
+    }
+ }
+
+
+ @media only screen and (max-width:414px) {
+.fuzzy-form {
+    width: 90% !important;
+    padding: 0.4 !important;
+    border-radius: 2rem;
+}
+.fuzzy-form .fuzzy-input {
+    padding: 0.4rem 0  !important;
+    width: 70% !important;
+}
+.fuzzy-form .btn-fuzzy {
+  background: none;
+  padding: 0.4rem 1rem;
+ }
+ .blog-post .blog-infor p {
+     font-weight: 400;
+     font-size: 0.7rem !important;
+     line-height: 1rem;
+ }
+ .blog-post .blog-image img {
+     width: 100% !important;
+ }
+ .blog-post .blog-infor .blog-btn-show {
+     padding: 0.2rem 0.7rem;
+ }
+ .blog-post {
+     width: 90% !important;
+ }
+ .add-blog-btn {
+     width: 50% !important;
+     padding: 0.3rem 0 !important;
+ }
+
+}
+
+@media only screen and (max-width:380px) {
+   .fuzzy-form  .fuzzy-input {
+       padding: 0.4rem 0 !important;
+       width: 70% !important;
+   }
+   .add-blog-btn {
+       width: 55% !important;
+   }
+}

@@ -1,0 +1,248 @@
+.pro-head  {
+    width: 100%;
+    height: 35vh;
+    margin: 1.5rem auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+.pro-head .background > img {
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.pro-head > .pro-picture {
+    width: 11rem;
+    height: 11rem;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    float: left;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    position: absolute;
+    top: 92px;
+    left: 48px;
+    overflow: hidden;
+}
+.pro-head .pro-picture  img {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    transform: scale(0.95);
+    margin: auto;
+
+}
+
+.pro-body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.pro-grid-item1 {
+    width: 95%;
+    height: auto;
+    background-color: white;
+}
+.pro-grid-item2 {
+    width: 100%;
+    height: 59vh;
+    background-color: whitesmoke;
+}
+.pro-grid-item1 .pro-stats {
+     display: grid;
+     grid-template-columns: 100%;
+     margin: 2rem auto;
+}
+.pro-stats > h4 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    margin: 0.6rem;
+}
+.pro-stats .follower ,.following,.likes {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pro-stats .follower > p,h5 ,.following > p,h5 ,.likes > p,h5 {
+    color: black;
+    padding: 0;
+    margin: 0.6rem;
+} 
+.pro-stats .follower > p ,.following > p ,.likes > p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+}
+.pro-stats .follower > h5 ,.following > h5 ,.likes > h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.1rem;
+}
+.user-settings {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.user-settings h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.blog-post {
+    width: 100% !important;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.pro-grid-item2 .bio {
+    width: 91%;
+    height: auto;
+    background-color: white;
+    margin-bottom: 2rem !important;
+    margin: 0 auto;
+    padding: 1rem;
+    display: none;
+} 
+
+.pro-grid-item2 .bio > p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0.5rem auto; 
+    padding: 0;
+}
+.pro-grid-item2 .bio > h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+    margin: 0;
+}
+
+.bio-link  {
+ text-align: center;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 1.3rem;
+}
+.bio-link a > h4 {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.bio-toggle {
+    display: block;
+}
+.bio-link a > h4 {
+   cursor: pointer;
+}
+
+@media only screen and (max-width:1024px){
+    .pro-head {
+        height: auto;
+    }
+    .pro-head .pro-picture {
+        top: 139px !important;
+        left: 82px !important;
+    }
+    .pro-head .background > img {
+        height: 15vh !important;
+    }
+    .pro-grid-item2 .bio {
+        width: 75% !important;
+    }
+    .pro-body {
+        display: grid;
+        grid-template-columns: 33% 74%;
+    }
+    .pro-grid-item1 {
+        height: 34vh !important;
+    }
+}
+@media only screen and (max-width:770px) {
+    .pro-head .pro-picture {
+        top: 96px !important;
+        left: 51px !important;
+        width: 8rem !important;
+        height: 8rem !important;
+    }
+    .pro-head .pro-picture > img {
+        width: 8rem !important;
+        height: 8rem !important;
+    }
+    .pro-grid-item1 {
+        height: 43vh !important;
+    }
+}
+@media only screen and (max-width:720px) {
+    .pro-body {
+        grid-template-columns: 100% !important;
+    }
+    .pro-head {
+        margin-bottom: 1rem !important;
+    }
+    .pro-head .pro-picture {
+        top: 91px !important;
+        left: 116px !important;
+        width:  7rem !important;
+        height: 7rem !important;
+    }
+    .pro-head .pro-picture > img {
+        width: 7rem !important;
+        height: 7rem !important;
+    }
+    .pro-stats .follower > p ,.following > p ,.likes > p {
+        font-size: 1.1rem;
+        margin: 0.4rem !important;
+    }
+    .pro-stats .follower > h5 ,.following > h5 ,.likes > h5  {
+        font-size: 0.9rem;
+        margin: 0.4rem !important;
+    }
+    .pro-stats {
+        margin: 0.2rem auto !important;
+        height: auto !important;
+    }
+    .pro-grid-item1 {
+        height: auto !important;
+        margin: 2rem auto !important;
+    }
+    .pro-grid-item2  .bio > p {
+        font-size: 0.7rem !important;
+    }
+    .bio-link a > h4 {
+        margin: 0.3rem;
+        font-size: 1rem ;
+    }
+
+    .user-settings h4 {
+        margin: 1rem;
+        font-size: 1.1rem;
+    }
+
+}
+@media only screen and (max-width:414px) {
+    .pro-head .pro-picture {
+        top: 80px !important;
+        left: 97px !important;
+        width:  6rem !important;
+        height: 6rem !important;
+    }
+    .pro-head .pro-picture > img {
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    .pro-head .background > img {
+        height: 10vh !important;
+    }
+    .pro-head {
+        margin-bottom: 0 !important;
+    }
+}

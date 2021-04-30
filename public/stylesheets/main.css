@@ -1,0 +1,622 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css?family=Abel|Anton|Josefin+Sans|Lexend+Deca|Livvic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+html body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color:whitesmoke;
+    scroll-behavior: smooth;
+    
+}
+
+     /* varriable  */
+:root {
+    /* font-family */
+    --Abel:'Abel',cursive;
+    --Anton:'Anton'cursive;
+    --Josefin:'Josefin',cursive;
+    --Lexend:'Lexend',cursive;
+    --Livvic:'Livvic',cursive;
+    --Raleway:'Raleway',cursive;
+    --Roboto:'Roboto',cursive;
+
+    /* Color */
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+    --light-sky:#a1c4cf;
+    
+
+    /* gradient-color */
+
+    --sky:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --violet:linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+
+     /* varriable--------------x---- */
+
+     /* profile css profile picture class */
+     .hide {
+         display: none;
+     }
+     .hiderev {
+         display: block;
+     }
+/* --------------global-------------- */
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+li {
+    list-style-type: none;
+}
+
+h3 {
+    font-family:var(--Abel);
+    font-size: 1.3rem;
+}
+h1 {
+    font-family: var(--Raleway);
+    font-size: 2.5rem;
+}
+h2{
+    font-family: var(--Roboto);
+}
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 2.7rem;
+    background: var(--sky);
+    font-family: var(--Raleway);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 0 6vh;
+}
+
+.text-gray {
+    color: rgba(250,250,250,0.7);
+}
+
+p {
+    font-family: var(--Roboto);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+/* --------------global---------x---- */
+/* alert-bar  */
+
+.container .alert-error {
+    padding: 0.4rem 0rem;
+    width: 65%;
+    color: darkred;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    margin: 0.6rem auto;  
+    text-align: center;
+    background-color: rgba(255 ,0 ,0, 0.2);
+    border-radius: 0.4rem;
+}
+.container .alert-success {
+    padding: 0.4rem 0rem;
+    width: 65%;
+    color: darkgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: auto;
+    margin: 0.4rem auto;  
+    text-align: center;
+    background-color: rgba(0, 255 ,0, 0.2);
+    border-radius: 0.4rem;
+}
+/* ----------navigation----------- */
+
+.nav {
+    background-color: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height:9vh;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family:var(--Abel);
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: 0.2s;
+} 
+.nav .nav-brand:hover a{
+    color: var(--midnight);
+    transform: scale(1.1);
+    font-weight: 800;
+    transition: 0.2s;
+}
+.nav .nav-menu {
+    justify-content: space-between;
+}
+.collapse {
+    height: 20rem;
+    transition: 0.2s;
+}
+.nav .nav-item{
+    display: flex;
+    margin: 0;
+}
+.nav .nav-item .nav-link{
+    padding: 1.6rem 1.4rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    transition: 0.3s;
+}
+.nav .nav-item .nav-link:hover {
+    background-color: var(--midnight);
+    transition: 0.3s;
+    transform: scale(1.06);
+    transition-duration: 0.3s;
+}
+.nav .nav-item .nav-link:hover a{
+    color: var(--white);
+    transition: 0.3s;
+}
+.nav .social {
+    padding: 1.4rem 0;
+    display: inherit;
+}
+.nav .social i{
+    padding: 0 0.7rem;
+    transition: 0.2s;
+
+}
+.nav .social i:hover{
+    color:var(--light-sky) ;
+    transform: scale(1.6);
+    transition: 0.2s;
+}
+
+.nav .social #logout:hover {
+    color: crimson !important;
+}
+.nav .social #addblog {
+    margin-right: 1rem;
+}
+.nav .toggle-collapse{
+    position:absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+.nav .toggle-collapse .toggle-icon{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem 0;
+}
+.nav .toggle-collapse .toggle-icon i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+/* ----------navigation-------x--- */
+
+/*------------ main-section -------------*/
+/* Title part */
+main .site-title {
+    background: url(../asset/Background-image.png);
+    height: 116vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+main .site-title .site-background {
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+main.site-title h1,h3 {
+margin: 0.3rem;
+}
+main .site-title .btn:hover {
+    border: 2px solid var(--white);
+    background: none;
+    color: var(--white);
+}
+/* title part end */
+
+/* blog-carousel-part */
+
+main .blog {
+    background-image: url("../assets/Abract01.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 116vh;
+    width: 100%;
+    background-size: 65%;
+}
+main .blog .blog-post {
+    padding-top: 6rem;
+}
+main .blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    margin: 3rem 2rem;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.2);
+}
+main .blog-content .blog-title {
+    padding: 2rem 0;
+}
+main .blog-title .btn-blog {
+    padding: 0.4rem 1.7rem;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+    margin: 0.5rem;
+}
+main .blog-title .btn-blog:hover {
+    background: var(--violet);
+}
+main .blog-title span {
+    display: block;
+    margin-top: 0.4rem;
+}
+main .blog-title h3 {
+    font-weight: 600;
+    color: var(--text-gray);
+    font-size: 1.2rem;
+    
+}
+/* blog-carousel-part end */
+
+/* site-content---------------------- */
+
+main .site-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+main .post-content{
+    width: 100%;
+    
+}
+
+main .site-content .post-content>.post-image,.post-title {
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main .site-content .post-content>.post-image .post-info {
+    background: var(--sky);
+    padding: 0.4rem 0.9rem;
+    position: absolute;
+    bottom: 0%;
+    left: 20vw;
+    border-radius: 3rem;
+}
+main .site-content .post-content>.post-image>div {
+    overflow: hidden;
+}
+main .site-content .post-content>.post-image .img {
+    width: 100%;
+    transition: all 1s ease;
+}
+main .site-content .post-content>.post-image .img:hover {
+    transform: scale(1.3);
+}
+main .site-content .post-content > .post-image .post-info span {
+    margin: 0.5rem;
+}
+main .post-content .post-title a{
+    font-family: var(--Raleway);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+}
+main .site-content .post-title .post-btn {
+    background-color: var(--sky);
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: rgba(0,0,0,0.7);
+    padding:0.7rem 1.1rem;
+}
+
+main .post-content .post-title button .arrow-btn {
+    color: rgba(0,0,0,0.7);
+}
+main .site-content .post-title .post-btn:hover{
+    background: var(--violet);
+}
+/* pageignation */
+main .site-content .pagination {
+    justify-content: center;
+    margin: 3rem 0;
+    color: var(--text-gray);
+}
+main .site-content .pagination a {
+    padding: .3rem .7rem;
+    margin: 0.5rem;
+    color:var(--text-gray);
+    font-family: var(--Abel);
+    font-weight: 400;
+    border-radius: 2rem;
+}
+.site-content .pagination .pages {
+    background-color: var(--text-gray);
+    color: var(--white);
+}
+
+/* pageignation */
+
+/* side nav bar  */
+
+main .site-content .sidenav .category h2{
+    color: var(--text-gray);
+    font-family: var(--Roboto);
+    font-size: 1.4rem;
+}
+main .site-content .sidenav .category .category-list .list-items {
+background: var(--sky);
+padding: 0.4rem 0.5rem;
+width: 70%;
+margin-top: 0.8rem;
+border-radius: 2rem;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+font-size: 0.8rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+}
+.site-content .sidenav .popular-post .post-content {
+    padding: 0.5rem 0;
+}
+.site-content  .sidenav .popular-post h2 {
+    margin-top: 10rem;
+    font-family: var(--Roboto);
+}
+.site-content .sidenav .post-content .post-info {
+    padding: .1rem .1rem !important;
+    bottom: 1rem !important;
+    left: 2rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+.site-content .sidenav .popular-post .post-title a{
+    font-size: 1rem;
+}
+/* newsletter */
+.site-content .sidenav .newsletter{
+    padding-top: 6rem;
+}
+
+.site-content .sidenav .newsletter .form-element{
+    padding: .5rem 2rem;
+}
+
+.site-content .sidenav .newsletter .input-element{
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-family: var(--Roboto);
+    font-size: 1rem;
+}
+
+.site-content .sidenav .newsletter .form-btn{
+    width: 80%;
+    border-radius: 0;
+    padding: .1rem auto;
+    margin: 1rem 0;
+    background: var(--sky);
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    color:var(--text-gray);
+}
+.site-content .sidenav .newsletter .form-btn:hover{
+    background: var(--violet);
+}
+/* popular tag */
+
+.site-content .sidenav .popular-tags{
+    padding: 5rem 0;
+}
+
+.site-content .sidenav .popular-tags .tags .tag{
+    background: var(--sky);
+    padding: .1rem 1rem;
+    border-radius: 3rem;
+    margin: .4rem .6rem;
+    font-family: var(--Abel);
+    color: var(--text-gray);
+}
+
+
+/* side nav bar  */
+/* site-content---------------------x */
+/*------------ main-section ---------x---*/
+/* ----------------- Footer --------------------- */
+
+footer.footer{
+    height: auto;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: var(--white);
+}
+
+footer.footer .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: .5rem 0.7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--Roboto);
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element span{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0 .4rem;
+}
+
+footer.footer .rights{
+    justify-content: center;
+    font-family: var(--Roboto);
+}
+
+footer.footer .rights h4 a{
+    color: var(--white);
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span{
+    color: var(--midnight);
+}
+
+footer.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* ---------x------- Footer ----------x---------- */
+/* views > files  */
+
+/* login page ejs file */
+
+
+/* login page ejs file --x-- */
+
+/* register */
+
+
+/* register ---hello -- */
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1130px){
+    .site-content .post-content > .post-image .post-info{
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidenav .popular-post .post-info{
+        display: none !important;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/*      x       Viewport less then or equal to 1130px    x     */
+
+
+
+
+/* Screen media qurrey  */
+@media only screen and (max-width:750px){
+    .nav .nav-menu,.nav .nav-item{
+       flex-direction: column;
+    }
+    .nav .toggle-collapse {
+        display: initial;
+    }
+    .nav .nav-item .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer .footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+/*              Viewport less then or equal to 520px            */
+
+@media only screen and (max-width: 520px){
+    main .blog{
+        height: 125vh;
+    }
+
+    .site-content .post-content > .post-image .post-info{
+        display: none;
+    }
+
+    footer.footer .container > div{
+        padding:  1rem .9rem !important;
+    }
+
+    footer .rights{
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+
+}
+
+/*        x      Viewport less then or equal to 520px       x     */

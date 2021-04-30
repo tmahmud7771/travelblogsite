@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.form-back .grid-form {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.form-back {
+  background-color: white;
+  width: 60%;
+  height: 70VH;
+  margin: 10vh auto;
+  box-shadow: 9px 15px 23px -11px rgba(0,0,0,0.3);
+  border-radius: 0.3rem;
+}
+.form-back .grid-item1 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.form-back .grid-item1 span i {
+  transform: scale(3.5);
+  color:#104f55;
+  margin-bottom: 3rem;
+  margin-top: 2.7rem;
+}
+.form-back .form-input input {
+  width: 30%;
+  margin: 0.5rem;
+  padding: 0.4rem 3.5rem;
+  border-radius: 2rem;
+  border: 0.1rem solid SLATEGRAY;
+}
+.form-back .form-input input:focus {
+  outline: none;
+  transform: scale(1.1);
+  border: 0.1rem solid deepskyblue;
+}
+
+.form-back .btn-form {
+  width: 35%;
+  padding: 0.4rem 0;
+  border-radius: 2rem;
+  background-color: DEEPSKYBLUE;
+  color:whitesmoke;
+  border: none;
+  margin-top: 1rem;
+}
+.form-back .btn-form:focus {
+ outline: none;
+}
+
+.form-back .btn-form:hover {
+  transform: scale(1.1);
+  color: deepskyblue;
+  background-color: white;
+  border: 2px solid deepskyblue;
+}
+
+.form-back .grid-form .grid-item2 {
+  background: url(https://images.unsplash.com/photo-1522328130867-8df79ee56d04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  background-size: cover;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  height: 70VH;
+  display: block;
+}
+
+.form-back .grid-form .grid-item1 p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+}
+.a-form-link {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:deepskyblue;
+  cursor: pointer;
+}
+.a-form-link:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+}
+
+.form-login {
+  display: block;
+}
+
+ .form-register {
+  display: none;
+ }
+ .form-reg {
+   display: none;
+ }
+
+ 
+ @media only screen and (max-width: 1024px){
+  .form-back .grid-form{
+    grid-template-columns: 100% !important;
+  }
+  .form-back .grid-form .grid-item2{
+     display: none;
+}
+.form-back {
+  height: 34vh !important;
+}
+}
+@media only screen and (max-width: 768px){
+  .form-back {
+    height: 40vh !important;
+  }
+}
+ @media only screen and (max-width: 720px){
+  .form-back {
+    height: 60vh !important;
+  }
+  .container {
+    margin: 0 -20vw;
+  }
+ }
