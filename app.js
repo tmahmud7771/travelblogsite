@@ -11,7 +11,7 @@ let express        = require("express");
     User           = require("./model/user"),
 
 //mongoose setup 
-mongoose.connect('mongodb+srv://tausif:Travel@cluster0-ytdq7.gcp.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser:true,useCreateIndex:true});
+mongoose.connect('mongodb+srv://tausif:01747636871@cluster0.ytdq7.gcp.mongodb.net/?retryWrites=true&w=majority',{useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));

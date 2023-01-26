@@ -1,7 +1,7 @@
 {
   "name": "blog-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "![home](https://user-images.githubusercontent.com/61903132/117515963-8fb8de00-afb9-11eb-825f-05fad8bf285a.PNG)\r ![causafs](https://user-images.githubusercontent.com/61903132/117515971-947d9200-afb9-11eb-96bc-a4ce5a27797d.PNG)\r ![blog](https://user-images.githubusercontent.com/61903132/117515976-96dfec00-afb9-11eb-9b8b-778e3d970afa.PNG)\r ![login](https://user-images.githubusercontent.com/61903132/117515980-99424600-afb9-11eb-997f-79bcb38221d7.PNG)",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,8 +17,16 @@
     "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.14",
-    "passport": "^0.4.1",
+    "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmahmud7771/travelblogsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tmahmud7771/travelblogsite/issues"
+  },
+  "homepage": "https://github.com/tmahmud7771/travelblogsite#readme"
 }
